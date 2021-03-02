@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *f = fopen("FILE","r");
+    int i,j,sum;
+    int n = 1000;
+    for(i = 1; i<=n; i++){
+        sum = 0;
+        for(j=1;j<i;j++){
+            if(i%j==0){
+                sum+=j;
+            }
+        }
+        if(sum==i){
+            printf("%d\n",i);
+        }
+    }
+    fclose(f);
+    return 0;
+}
+
